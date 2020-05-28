@@ -1,19 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../src/assets/css/main.css';
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  Redirect,
-} from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom';
+
+import Home from './pages/Home';
+import Feature from './pages/Feature';
+import Price from './pages/Price';
+import Contact from './pages/Contact';
+import NotFoundPage from './pages/404';
 
 function App() {
   return (
-    <div className="App">
-      <button className="btn">Sign Up</button>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/feature" component={Feature} />
+        <Route exact path="/price" component={Price} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/404" component={NotFoundPage} />
+        <Redirect to="/home" />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
