@@ -1,0 +1,41 @@
+.hero-banner {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  background-color: #22195b;
+  overflow: hidden;
+  color: $text-color-white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  @include flexCenter(row);
+
+  &__img {
+    width: 90%;
+    height: 80%;
+  }
+
+  .hero-banner-wrapper {
+    @include flexCenter(row);
+  }
+
+  &__cta {
+    @include flexCenter(column);
+    align-items: flex-start;
+    width: 70%;
+    padding: 0 0.8rem;
+  }
+
+  &__cta-title {
+    font-size: 3.1rem;
+    font-family: $title-font;
+    margin-bottom: 1.4rem;
+  }
+
+  &__cta-text {
+    margin-bottom: 2.8rem;
+  }
+}

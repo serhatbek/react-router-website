@@ -1,0 +1,47 @@
+.feature__wrapper {
+  margin: 14rem 0;
+}
+
+.feature__info {
+  margin: 0 15rem;
+  padding-bottom: 5rem;
+  text-align: center;
+
+  &-title {
+    font-family: $title-font;
+    font-size: 2.25rem;
+    color: $title-color;
+  }
+
+  &-paragraph {
+    color: $text-color;
+  }
+}
+
+.feature__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.feature__card {
+  padding: 1.8rem 2rem;
+  background-color: $secondary-color;
+
+  &-icon {
+    color: $primary-color;
+    font-size: 1.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &-title {
+    font-size: 1.3rem;
+    font-family: $title-font;
+    color: $title-color;
+    margin-bottom: 0.5rem;
+  }
+
+  &-paragraph {
+    color: $text-color;
+  }
+}

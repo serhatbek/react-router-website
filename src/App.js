@@ -3,6 +3,7 @@ import '../src/assets/css/main.css';
 
 import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom';
 
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Feature from './pages/Feature';
 import Price from './pages/Price';
@@ -12,6 +13,8 @@ import NotFoundPage from './pages/404';
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
+
       <Switch>
         <Route exact path="/home" component={Home} />
         <Route exact path="/feature" component={Feature} />

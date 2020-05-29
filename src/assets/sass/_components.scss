@@ -1,0 +1,79 @@
+//*************NAVBAR*******************
+
+header {
+  padding: 1.25rem 0;
+  background: $primary-color;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+
+  .site-logo {
+    font-family: $title-font;
+    font-size: 2rem;
+    color: $text-color-white;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  &__item {
+    margin-left: 1.8rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $text-color;
+    padding: 0.5rem;
+
+    color: $text-color-white;
+
+    &:hover {
+      border-bottom: 1px solid $text-color-white;
+      color: $hover-text-color;
+    }
+  }
+
+  .btn__login {
+    background: transparent;
+    color: $text-color-white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 1px solid $text-color-white;
+      color: $hover-text-color;
+    }
+  }
+}
+
+// .hero-banner {
+//   height: 100vh;
+//   position: relative;
+//   z-index: 1;
+//   background-size: cover;
+//   background-color: #22195b;
+//   overflow: hidden;
+
+//   &:after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 60%;
+//     background-image: url(../assets/img/banner-bg.png);
+//     background-position: left;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     z-index: 1;
+//   }
+// }

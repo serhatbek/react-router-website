@@ -3,6 +3,28 @@
 // font-family: 'Rajdhani', sans-serif;
 // font-family: 'Roboto', sans-serif;
 
+//************VARIABLES****************
+
+$primary-color: #22195a;
+$secondary-color: #faf9ff;
+
+$text-font: 'Roboto', sans-serif;
+$title-font: 'Rajdhani', sans-serif;
+
+$text-color: #797979;
+$text-color-white: #fff;
+$title-color: #3a414e;
+$hover-text-color: #bcbeff;
+
+//************MIXINS****************
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
 //************RESETS****************
 
 *,
@@ -14,11 +36,13 @@
 }
 
 html {
-  font-weight: 100%;
+  font-size: 100%;
 }
 
 body {
+  font-family: $text-font;
   line-height: 1.5;
+  font-size: 1rem;
 }
 
 ul {
@@ -31,34 +55,32 @@ textarea,
 select {
   outline: none;
   font-family: inherit;
-}
-
-//************VARIABLES****************
-
-$primary-color: #22195a;
-$secondary-color: #faf9ff;
-
-$text-font: 'Roboto', sans-serif;
-$title-font: 'Rajdhani', sans-serif;
-
-$text-color: #797979;
-$tittle-color: #3a414e;
-
-//************MIXINS****************
-
-@mixin flexCenter($direction) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: $direction;
+  font-size: inherit;
 }
 
 //************UTILITIES****************
 
 .btn {
-  padding: 0.75rem 2.5rem;
-  color: $tittle-color;
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  color: $title-color;
   border-radius: 1.8rem;
   border: 1px solid $primary-color;
-  background-color: #fff;
+  background-color: $text-color-white;
+  cursor: pointer;
+  transition: 500ms ease-out;
 }
+
+.btn-light:hover {
+  color: $text-color-white;
+  background: $primary-color;
+  border: 1px solid $text-color-white;
+  transform: translateY(-2px);
+}
+
+// .btn-dark:hover {
+//   color: $text-color-white;
+//   background: $primary-color;
+//   border: 1px solid $primary-color;
+//   transform: translateY(-2px);
+// }

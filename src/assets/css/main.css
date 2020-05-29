@@ -9,11 +9,13 @@
 }
 
 html {
-  font-weight: 100%;
+  font-size: 100%;
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
+  font-size: 1rem;
 }
 
 ul {
@@ -26,23 +28,248 @@ textarea,
 select {
   outline: none;
   font-family: inherit;
+  font-size: inherit;
 }
 
 .btn {
-  padding: 0.75rem 2.5rem;
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
   color: #3a414e;
   border-radius: 1.8rem;
   border: 1px solid #22195a;
   background-color: #fff;
+  cursor: pointer;
+  transition: 500ms ease-out;
+}
+
+.btn-light:hover {
+  color: #fff;
+  background: #22195a;
+  border: 1px solid #fff;
+  transform: translateY(-2px);
 }
 
 .container {
   max-width: 1140px;
-  padding: 1.25rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
 }
 
-body {
-  font-weight: 300;
-  font-size: 60px;
-  font-family: "Roboto", sans-serif;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+header {
+  padding: 1.25rem 0;
+  background: #22195a;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+
+.main-nav .site-logo {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.main-nav__items {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.main-nav__item {
+  margin-left: 1.8rem;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: #797979;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.main-nav__link:hover {
+  border-bottom: 1px solid #fff;
+  color: #bcbeff;
+}
+
+.main-nav .btn__login {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.main-nav .btn__login:hover {
+  border-bottom: 1px solid #fff;
+  color: #bcbeff;
+}
+
+.hero-banner {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  background-color: #22195b;
+  overflow: hidden;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.hero-banner__img {
+  width: 90%;
+  height: 80%;
+}
+
+.hero-banner .hero-banner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.hero-banner__cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  padding: 0 0.8rem;
+}
+
+.hero-banner__cta-title {
+  font-size: 3.1rem;
+  font-family: "Rajdhani", sans-serif;
+  margin-bottom: 1.4rem;
+}
+
+.hero-banner__cta-text {
+  margin-bottom: 2.8rem;
+}
+
+.feature__wrapper {
+  margin: 14rem 0;
+}
+
+.feature__info {
+  margin: 0 15rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.feature__info-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2.25rem;
+  color: #3a414e;
+}
+
+.feature__info-paragraph {
+  color: #797979;
+}
+
+.feature__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.feature__card {
+  padding: 1.8rem 2rem;
+  background-color: #faf9ff;
+}
+
+.feature__card-icon {
+  color: #22195a;
+  font-size: 1.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature__card-title {
+  font-size: 1.3rem;
+  font-family: "Rajdhani", sans-serif;
+  color: #3a414e;
+  margin-bottom: 0.5rem;
+}
+
+.feature__card-paragraph {
+  color: #797979;
+}
+
+.price {
+  text-align: center;
+}
+
+.price__title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2.25rem;
+  color: #3a414e;
+  margin: 3rem 0;
+}
+
+.price__card {
+  padding: 2.5rem 0.9rem;
+  background-color: #faf9ff;
+  transition: 400ms ease-out;
+}
+
+.price__card:hover {
+  background-color: #fff;
+  box-shadow: 0 0.4rem 1rem 0 rgba(58, 65, 78, 0.6);
+}
+
+.price__card:hover .btn-dark {
+  color: #fff;
+  background: #22195a;
+  border: 1px solid #22195a;
+  transform: translateY(-2px);
+}
+
+.price__card-title {
+  font-family: "Rajdhani", sans-serif;
+  color: #3a414e;
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.price__card-text {
+  color: #797979;
+  margin: 0.8rem 0;
+}
+
+.price__card-price {
+  font-size: 3.75rem;
+  font-weight: 900;
+  color: #3a414e;
+  margin-bottom: 1.25rem;
+}
+
+.price__card-price .dollar-sign {
+  font-size: 2.5rem;
+  vertical-align: middle;
+  position: relative;
+  bottom: 0.3rem;
+}
+
+.price__card .btn-dark {
+  margin-top: 4rem;
 }

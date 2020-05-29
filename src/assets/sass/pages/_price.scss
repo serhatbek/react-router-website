@@ -1,0 +1,57 @@
+.price {
+  text-align: center;
+  &__title {
+    font-family: $title-font;
+    font-size: 2.25rem;
+    color: $title-color;
+    margin: 3rem 0;
+  }
+}
+
+.price__card {
+  padding: 2.5rem 0.9rem;
+  background-color: $secondary-color;
+  transition: 400ms ease-out;
+
+  &:hover {
+    background-color: #fff;
+    box-shadow: 0 0.4rem 1rem 0 rgba($title-color, 0.6);
+
+    .btn-dark {
+      color: $text-color-white;
+      background: $primary-color;
+      border: 1px solid $primary-color;
+      transform: translateY(-2px);
+    }
+  }
+
+  &-title {
+    font-family: $title-font;
+    color: $title-color;
+    font-size: 1.7rem;
+    margin-bottom: 0.3rem;
+  }
+
+  &-text {
+    color: $text-color;
+    margin: 0.8rem 0;
+  }
+
+  &-price {
+    font-size: 3.75rem;
+    font-weight: 900;
+    color: $title-color;
+    margin-bottom: 1.25rem;
+
+    .dollar-sign {
+      font-size: 2.5rem;
+      vertical-align: middle;
+      position: relative;
+      bottom: 0.3rem;
+    }
+  }
+
+  .btn-dark {
+    margin-top: 4rem;
+  }
+}
